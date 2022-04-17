@@ -4,18 +4,18 @@ import { CountDownContext } from "../contexts/CountDownContext";
 import styles from "../styles/components/ChallengeBox.module.css";
 
 export function ChallengeBox() {
-  const { activeChallenge, resetChallenge, completeChallenge } =
-    useContext(ChallengesContext);
-
-  const { resetCountdown } = useContext(CountDownContext);
-
-  function handleChallengeSuceeded() {
-    completeChallenge();
-    resetCountdown();
+  const { activeChallenge, resetChallenge, completeChallenge } = 
+    useContext(ChallengesContext); 
+ 
+  const { resetCountdown } = useContext(CountDownContext);      
+ 
+  function handleChallengeSuceeded() {   
+    completeChallenge(); 
+    resetCountdown();  
   }
 
-  function handleChallengeFailed() {
-    resetChallenge();
+  function handleChallengeFailed() { 
+    resetChallenge(); 
     resetCountdown();
   }
 
